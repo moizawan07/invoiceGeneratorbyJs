@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Imagination Invoice Example</title>
+    <!-- For Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- For Personal -->
+     <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+     <select  id="Select" onchange="styles()">
+      <option value="Style1">Style1</option>
+      <option value="Style2">Style2</option>
+      <option value="Style3">Style3</option>
+      <option value="Style4">Style4</option>
+      <option value="Style5">Style5</option>
+      <option value="Style6">Style6</option>
+      <option value="Style7">Style7</option>
+      <option value="Style8">Style8</option>
+      <option value="Style9">Style9</option>
+      <option value="Style10">Style10</option>
+     </select>
+    <div id="container" class="Cbrown">
+       
+        <div  class="card">
+            <div class="card-header text-center">
+              <h4 id="heading" class="hbrown">INVOICE</h4>
+            </div>
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-8">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >Customer</span>
+                            <input type="text" class="form-control" placeholder="Customer"  >
+                        </div>
+            
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >Address</span>
+                            <input type="text" class="form-control" placeholder="Address"  >
+                        </div>
+            
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >City</span>
+                            <input type="text" class="form-control" placeholder="City"  >
+                        </div>
+                    </div>
+                    <div class="col-4">
+                      
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >Inv. No</span>
+                            <input type="text" class="form-control" placeholder="Inv. No"  >
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >Inv. Date</span>
+                            <input type="date" class="form-control" placeholder="Inv. Date"  >
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+                <table class="table table-bordered" id="tableadd">
+                    <!-- <thead class="brown" id="tableHead"> -->
+                      <tr class="thbrown" id="tableheading">
+                        <th>#</th>
+                        <th colspan="3">Item & Description</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                        <th>Amount</th>
+                        <th class="text-end" id="BtnTh" onmouseover="btnThHover()" onmouseleave="btnthRemove()">                         
+                            <button type="button"  id="ItemAdd" onclick="addItem()">+</button>
+                        </th>
+                      </tr>
+                    <!-- </thead> -->
+                    <tbody id="TBody">
+                      <tr id="TRow" class="d-none">
+                        <th scope="row">1</th>
+                        <td><input type="text" class="form-control" ></td>
+                        <td><input type="number" class="form-control text-end" name="qty" onchange="Calc(this);"></td>
+                        <td><input type="number" class="form-control text-end" name="rate"  onchange="Calc(this);"></td>
+                        <td><input type="number" class="form-control text-end" name="amt" value="0" disabled=""></td>
+                        <td class="NoPrint"><button type="button" class="btn btn-sm btn-danger" onclick="BtnDel(this)">X</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                  <div class="row">
+                    <div class="col-8">
+                      
+                        <button type="button" id="cli" class="cbrown">Click</button>
+
+                    </div>
+                    <div class="col-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >Total</span>
+                            <input type="number" class="form-control text-end" id="FTotal" name="FTotal" disabled="">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >GST</span>
+                            <input type="number" class="form-control text-end" id="FGST" name="FGST" onchange="GetTotal()">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" >Net Amt</span>
+                            <input type="number" class="form-control text-end" id="FNet" name="FNet" disabled="">
+                        </div>
+
+
+                    </div>
+                </div>
+             </div>
+          </div>
+
+    </div>
+   <script src="app.js"></script>
+  </body>
+</html>

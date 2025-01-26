@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#container{
+    width: 1080px;
+}
+#cli{
+    color: white;
+    padding-inline: 40px;
+    border: none;
+    padding-block: 5px;
+    border-radius: 4px;
+    &:hover{
+        border: 1px solid black;
+    }
+}
+select{
+   position: relative;
+   top: 22px;
+   left: 5px;
+    border: none;
+    box-shadow: 0px 0px 3px black;
+    padding-inline: 10px;
+    font-size: 15px;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#tableheading{
+  color: white;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.table-bordered>:not(caption)>*>* {
+    border-width: 0px;
+}
+#ItemAdd{
+    width: 35px;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    border-radius: 0px;
+    font-weight: 800;
+    background-color: transparent;
+    border: none;
+    color: whitesmoke;
+    display: none;
+}
+tr input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+tr{
+    background-color: #F8F8F8;
+    border-bottom: 1px solid grey;
+}
+td{
+    padding-block: 20px !important;
+    padding-left: 10px;
+}
+.itemrem{
+    /* width: 35px; */
+    /* height: 30px; */
+    text-align: end;
+    align-content: center;
+    border-radius: 0px;
+    font-weight: 800;
+    background-color: transparent;
+    border: none;
+    color: black;
+   display: none;
+}
+/* Heading styles */
+.hbrown{
+    color: #AB3907;
+}
+.hblue{
+    color: darkblue;
+}
+.horange{
+    color: orange;
+}
+.hcyan{
+    color: darkcyan;
+}
+.hblack{
+    color: black;
+}
+.hred{
+    color: rgb(192, 22, 56);
+}
+.hcoral{
+   color: rgb(249, 91, 33);
+}
+.hlightgr{
+   color: lightslategray;
+}
+.hgrey{
+   color: gray;
+}
+.hgreen{
+   color: rgb(16, 83, 16);
+}
+/* Table heading styles */
+.thbrown{
+    background-color: brown;
+}
+.thblue{
+    background-color: darkblue;
+}
+.thorange{
+    background-color: orange;
+}
+.thcyan{
+    background-color: darkcyan;
+}
+.thblack{
+    background-color: black;
+}
+.thred{
+    background-color: rgb(192, 22, 56);
+}
+.thcoral{
+    background-color: rgb(249, 91, 33);
+}
+.thlightgr{
+    background-color: lightslategray;
+}
+.thgrey{
+    background-color: gray;
+}
+.thgreen{
+    background-color: rgb(16, 83, 16);
+}
+/* For button styles click */
+.cbrown{
+    background-color: brown;
+}
+.cblue{
+    background-color: darkblue;
+}
+.corange{
+    background-color: orange;
+}
+.ccyan{
+    background-color: darkcyan;
+}
+.cblack{
+    background-color: black;
+}
+.cred{
+    background-color: rgb(185, 36, 66);
+}
+.ccoral{
+    background-color: rgb(241, 77, 17);
+}
+.clightgr{
+    background-color: rgb(117, 143, 169);
+}
+.cgrey{
+    background-color: grey;
+}
+.cgreen{
+    background-color: rgb(4, 68, 4);
+}
