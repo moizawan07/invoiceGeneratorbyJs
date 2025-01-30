@@ -5,6 +5,8 @@
 }
 #container{
     width: 1080px;
+    border-radius: 7px;
+    /* box-shadow: 1px 1px 2px rgb(150, 149, 149) , -1px -1px 2px rgb(165, 164, 164) ; */
 }
 #cli{
     color: white;
@@ -13,37 +15,41 @@
     padding-block: 5px;
     border-radius: 4px;
     &:hover{
-        border: 1px solid black;
+        /* border: 1px solid white; */
     }
 }
+#cli:active{
+    transform: translateY(-10px);
+    transition: 0.2s ease-in-out;
+}
 select{
-   position: relative;
-   top: 22px;
-   left: 5px;
-    border: none;
-    box-shadow: 0px 0px 3px black;
-    padding-inline: 10px;
-    font-size: 15px;
+  margin-block: 20px;
+   border: none;
+   box-shadow: 0px 0px 3px black;
+   padding-inline: 10px;
+   font-size: 15px;
+   outline: none;
 }
 body{
     width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    /* justify-content: space-between; */
     flex-direction: column;
 }
 #tableheading{
   color: white;
   align-items: center;
-  margin-bottom: 50px;
+  text-align: center;
+  /* margin-bottom: 50px; */
 }
 .table-bordered>:not(caption)>*>* {
-    border-width: 0px;
+    border-width: 0.1px;
 }
 #ItemAdd{
     width: 35px;
-    height: 30px;
+    /* height: 30px; */
     text-align: center;
     align-content: center;
     border-radius: 0px;
@@ -52,20 +58,35 @@ body{
     border: none;
     color: whitesmoke;
     display: none;
+    font-size: 35px;
+    position: relative;
+    bottom: 10px;
+    &:active{
+        background-color: green;
+        color: white;
+    }
 }
 tr input{
     background-color: transparent;
-    border: none;
     outline: none;
     font-size: 15px;
+    width: 100%;
+    border: 0.2px solid grey;
+   &:focus{
+    border: 0.2px solid darkred;
+   } 
 }
+/* tr .amount{
+    border: none;
+   border-bottom: 1px dotted brown !important;
+} */
 tr{
     background-color: #F8F8F8;
     border-bottom: 1px solid grey;
 }
 td{
-    padding-block: 20px !important;
-    padding-left: 10px;
+    padding-block: 25px !important;
+    padding-left: 7px;
 }
 .itemrem{
     /* width: 35px; */
@@ -171,4 +192,36 @@ td{
 }
 .cgreen{
     background-color: rgb(4, 68, 4);
+}
+/* For Container border styles click */
+
+.Cbrown{
+    border: 1.3px dotted brown;
+}
+.Cblue{
+    border: 1.3px dotted darkblue;
+}
+.Corange{
+    border: 1.3px dotted orange;
+}
+.Ccyan{
+    border: 1.3px dotted darkcyan;
+}
+.Cblack{
+    border: 1.3px dotted black;
+}
+.Cred{
+    border: 1.3px dotted darkred;
+}
+.Ccoral{
+    border: 1.3px dotted rgb(247, 86, 28);
+}
+.Clightgr{
+    border: 1.3px dotted lightslategray;
+}
+.Cgrey{
+    border: 1.3px dotted grey;
+}
+.Cgreen{
+    border: 1.3px dotted rgb(2, 58, 2);
 }
